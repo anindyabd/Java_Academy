@@ -1,3 +1,23 @@
 // Place all the styles related to the Lessons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#editor {
+    /* margin: 0; */
+    position: absolute;
+    top: 0;
+    bottom: 30%;
+    left: 30%;
+    right: 0;
+}
+
+#lesson {
+    float: left;
+    width: 28%;
+    padding: 5px; 
+}
+
+#submit_button {
+    float: left;
+    margin-top: 35%;
+}
