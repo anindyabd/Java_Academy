@@ -7,11 +7,25 @@ class Lesson < ActiveRecord::Base
     def check_submission(code)
         # Submit the code for a lesson, returning a hash containing 
         # the following key. 
-        # :testspassed  bool array showing whether test cases pass
-        # :compiled?    false if compile error
-        # :stdout       an array containing stdout of test cases
-        # :stderr       an array containing stderr of test cases
-        response = submit_work(code,self.testcases)
+        # :testspassed      bool array showing whether test cases pass
+        # :stdout           an array containing stdout of test cases
+        # :stderr           an array containing stderr of test cases
+        response = Lesson.submit_work(code,self.testcases)
+        num_tests = self.testcases.length
+        
+        result = {}
+        result[:testspassed] = Array.new(num_tests)
+        result[:stdout] = response["stdout"]
+        result[:stderr] = response["stderr"]
+        
+        for i in (0...num_tests).to_a do
+            if self.expectedresults[i] == result[:stdout][i]
+                result[:testspassed][i] = true
+            else
+                result[:testspassed][i] = false
+            end
+        end
+        return result
         
     end
 
@@ -20,7 +34,7 @@ class Lesson < ActiveRecord::Base
         # See https://www.hackerrank.com/api/docs for details
         uri = URI("http://api.hackerrank.com/checker/submission.json")
         form = {"source" => code, 
-                "lang" => 5, # Number code for Java is 3
+                "lang" => 3, # Number code for Java is 3
                 "testcases" => testcases.to_json,
                 "api_key" => API_KEY,
                 'format' => 'json'}
@@ -37,5 +51,6 @@ class Lesson < ActiveRecord::Base
     def self.test_submit
         submit_work('print 1', ["1"])
     end
-  
+
+
 end
