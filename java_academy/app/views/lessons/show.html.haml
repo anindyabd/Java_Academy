@@ -6,8 +6,11 @@
   %body
     #lesson
       %h1 Java Academy
+      %p= "Lesson " << @lesson.number.to_s
       %p= @lesson.description
       %p= @lesson.instruction
+      %p= @lesson.testcases
+      %p= @lesson.expectedresults
     #editor
       %pre
         = @lesson.skeleton_code
