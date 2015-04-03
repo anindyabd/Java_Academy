@@ -1,3 +1,7 @@
-- if params[:realacesubmit]
-    = params[:realacesubmit]
-= @result
+%h1 JavaAcademy
+%p Welcome to JavaAcademy! Here we teach you the basics of the programming language Java. 
+%p Click on a lesson below to continue!
+%ul 
+  - @lessons.each do |lesson|
+    - # I'll fix this turbolink issue later. Or someone could try messing with it.
+    %li= link_to "Lesson" << lesson.number.to_s, lesson_path(lesson), "data-no-turbolink" => true  

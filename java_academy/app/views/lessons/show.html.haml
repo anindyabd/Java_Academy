@@ -13,13 +13,15 @@
       %p= @lesson.expectedresults
       - if params[:result]
         %p= params[:result]
+      %p= link_to "Return to list of lessons", lessons_path
     #editor
       %pre
         = @lesson.skeleton_code
 
-    - # should change method to post later. Also need to configure routes.
-    = form_tag lessons_path, method: "get", :id => "form_tag_id" do 
+    = form_tag 'submit', :id => "form_tag_id" do 
       = label_tag "realacesubmit" 
-      = hidden_field_tag "realacesubmit", :id => "realacesubmit" 
+      = hidden_field_tag "realacesubmit", :id => "realacesubmit"
+      = label_tag "lessonid"
+      = hidden_field_tag "lessonid", params[:id], :id => "lessonid" 
       %button#submit_button Submit
     %script{:charset => "utf-8", :src => "src/ace.js", :type => "text/javascript"}
