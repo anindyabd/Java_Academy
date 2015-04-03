@@ -28,6 +28,11 @@ gem "paperclip", "~> 4.2"
 
 # Use haml for HTML templates
 gem 'haml-rails'
+
+# Use simplecov to output coverage to html file
+gem 'simplecov'
+gem 'simplecov-rcov'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -46,12 +51,13 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  
+ 
+
   # Testing gems
   gem 'rspec-rails'
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
   gem 'capybara'
-
+  gem 'database_cleaner'
 end
 
