@@ -5,27 +5,36 @@ class Lesson < ActiveRecord::Base
     API_KEY = "hackerrank|204549-190|a37e68ec781f2525a479a5971c43772cb13b0013"
 
     def check_submission(code)
-        # Submit the code for a lesson, returning a hash containing 
+        response = Lesson.submit_work(code, self.testcases)
+        return Lesson.test_response(response, self.testcases, 
+                                self.expectedresults)
+    end
+
+    def self.test_response(response,testcases,expectedresults)
+        # Verify the response of a submission against a lesson testcases
         # the following key. 
         # :testspassed      bool array showing whether test cases pass
         # :stdout           an array containing stdout of test cases
         # :stderr           an array containing stderr of test cases
-        response = Lesson.submit_work(code,self.testcases)
-        num_tests = self.testcases.length
-        
+        # :error            a string containing error with submission process
+        #                   not to confuse with :stderr
         result = {}
-        result[:testspassed] = Array.new(num_tests)
-        result[:stdout] = response["stdout"]
-        result[:stderr] = response["stderr"]
-        for i in (0...num_tests).to_a do
-            if self.expectedresults[i] == result[:stdout][i]
-                result[:testspassed][i] = true
-            else
-                result[:testspassed][i] = false
+        num_tests = testcases.length
+        if response == nil # Error with HTTP POST
+            result[:error] = "Error: Could not submit the code"
+        else
+            result[:testspassed] = Array.new(num_tests)
+            result[:stdout] = response["stdout"]
+            result[:stderr] = response["stderr"]
+            for i in (0...num_tests).to_a do
+                if expectedresults[i] == result[:stdout][i]
+                    result[:testspassed][i] = true
+                else
+                    result[:testspassed][i] = false
+                end
             end
-        end
+        end 
         return result
-        
     end
 
     def self.submit_work(code, testcases)
@@ -45,10 +54,6 @@ class Lesson < ActiveRecord::Base
         else
             result = nil
         end
-    end
-
-    def self.test_submit
-        submit_work('print 1', ["1"])
     end
 
 
