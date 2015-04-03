@@ -4,4 +4,4 @@
 %ul 
   - @lessons.each do |lesson|
     - # I'll fix this turbolink issue later. Or someone could try messing with it.
-    %li= link_to "Lesson" << lesson.number.to_s, lesson_path(lesson), "data-no-turbolink" => true  
+    %li= link_to "Lesson " << lesson.number.to_s, lesson_path(lesson), "data-no-turbolink" => true  

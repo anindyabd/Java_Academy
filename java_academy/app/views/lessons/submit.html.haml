@@ -1,5 +1,29 @@
-= params[:id] 
+%h1 Results  
 
-%p= @result
+%p
+  - if flash[:notice]
+    = flash[:notice]    
+
+%h4 Your code returned this on standard output (stdout)
+%p
+  - if @result[:stdout] == nil
+    We could not run your code, so nothing was returned.  
+  - else
+    = @result[:stdout][0]
+
+
+%h4 Your code performed as follows in our tests (true if passed, false if not):
+%p
+  - if @result[:stdout] == nil
+    We could not run your code, so we could not run our tests.  
+  - else
+    = @result[:testspassed][0]
+
+%h4 Your code returned the following errors (false if no errors):
+%p
+  - if @result[:stdout] == nil
+    = @result[:stderr]  
+  - else
+    = @result[:stderr][0]
 
 %p= link_to "Return to list of lessons", lessons_path

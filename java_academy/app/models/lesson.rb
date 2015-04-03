@@ -26,11 +26,13 @@ class Lesson < ActiveRecord::Base
             result[:testspassed] = Array.new(num_tests)
             result[:stdout] = response["stdout"]
             result[:stderr] = response["stderr"]
-            for i in (0...num_tests).to_a do
-                if expectedresults[i] == result[:stdout][i]
-                    result[:testspassed][i] = true
-                else
-                    result[:testspassed][i] = false
+            if result[:stdout] != nil
+                for i in (0...num_tests).to_a do
+                    if expectedresults[i] == result[:stdout][i]
+                        result[:testspassed][i] = true
+                    else
+                        result[:testspassed][i] = false
+                    end
                 end
             end
         end 
