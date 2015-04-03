@@ -11,9 +11,15 @@
       %p= @lesson.instruction
       %p= @lesson.testcases
       %p= @lesson.expectedresults
+      - if params[:result]
+        %p= params[:result]
     #editor
       %pre
         = @lesson.skeleton_code
-    #submit_button
-      %button{:type => "submit"} Submit
+
+    - # should change method to post later. Also need to configure routes.
+    = form_tag lessons_path, method: "get", :id => "form_tag_id" do 
+      = label_tag "realacesubmit" 
+      = hidden_field_tag "realacesubmit", :id => "realacesubmit" 
+      %button#submit_button Submit
     %script{:charset => "utf-8", :src => "src/ace.js", :type => "text/javascript"}

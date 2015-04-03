@@ -6,3 +6,6 @@ $(document).ready ->
     editor = ace.edit("editor");
     editor.setTheme("ace/theme/monokai");
     editor.getSession().setMode("ace/mode/java");
+    document.getElementById("submit_button").addEventListener "click", () ->
+        document.getElementById("realacesubmit").value = editor.getValue();
+        document.getElementById("form_tag_id").submit();
