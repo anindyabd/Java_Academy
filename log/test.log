@@ -694,3 +694,171 @@ Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36m (235.2ms)[0m  [1mDROP DATABASE IF EXISTS "db/testdb"[0m
+  [1m[35m (709.5ms)[0m  CREATE DATABASE "db/testdb" ENCODING = 'utf8'
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (124.3ms)[0m  CREATE TABLE "lessons" ("id" serial primary key, "number" integer, "name" character varying, "description" text, "instruction" text, "skeleton_code" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "testcases" text, "expectedresults" text) 
+  [1m[36m (119.5ms)[0m  [1mCREATE TABLE "records" ("id" serial primary key, "user_id" integer, "lesson_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (108.9ms)[0m  CREATE TABLE "users" ("id" serial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (56.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (55.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.9ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (9.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150401000532')
+  [1m[36m (10.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150327152716')[0m
+  [1m[35m (10.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150327152311')
+  [1m[36m (10.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150327152405')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 03:53:22.885744"], ["updated_at", "2015-04-04 03:53:22.885744"]]
+  [1m[35m (11.4ms)[0m  COMMIT
+  [1m[36mLesson Load (0.7ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "lessons" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2015-04-04 03:53:22.951495"], ["updated_at", "2015-04-04 03:53:22.951495"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "lessons" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2015-04-04 03:53:22.953905"], ["updated_at", "2015-04-04 03:53:22.953905"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 03:56:47.594695"], ["updated_at", "2015-04-04 03:56:47.594695"]]
+  [1m[35m (22.6ms)[0m  COMMIT
+  [1m[36mLesson Load (0.7ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "lessons" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2015-04-04 03:56:47.667744"], ["updated_at", "2015-04-04 03:56:47.667744"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "lessons" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2015-04-04 03:56:47.670596"], ["updated_at", "2015-04-04 03:56:47.670596"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:00:12.719761"], ["updated_at", "2015-04-04 04:00:12.719761"]]
+  [1m[35m (16.2ms)[0m  COMMIT
+  [1m[36mLesson Load (0.8ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "lessons" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2015-04-04 04:00:12.786174"], ["updated_at", "2015-04-04 04:00:12.786174"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "lessons" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2015-04-04 04:00:12.789203"], ["updated_at", "2015-04-04 04:00:12.789203"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
