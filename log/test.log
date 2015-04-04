@@ -862,3 +862,776 @@ Completed 500 Internal Server Error in 1ms
   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
   [1m[35m (0.2ms)[0m  BEGIN
   [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:14:08.055797"], ["updated_at", "2015-04-04 04:14:08.055797"]]
+  [1m[35m (19.9ms)[0m  COMMIT
+  [1m[36mLesson Load (0.7ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:15:09.846383"], ["updated_at", "2015-04-04 04:15:09.846383"]]
+  [1m[35m (22.2ms)[0m  COMMIT
+  [1m[36mLesson Load (0.8ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:21:30.181487"], ["updated_at", "2015-04-04 04:21:30.181487"]]
+  [1m[35m (17.7ms)[0m  COMMIT
+  [1m[36mLesson Load (0.7ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mLesson Load (0.4ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:23:25.090055"], ["updated_at", "2015-04-04 04:23:25.090055"]]
+  [1m[35m (20.3ms)[0m  COMMIT
+  [1m[36mLesson Load (0.7ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mLesson Load (0.4ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:26:10.495867"], ["updated_at", "2015-04-04 04:26:10.495867"]]
+  [1m[35m (14.8ms)[0m  COMMIT
+  [1m[36mLesson Load (0.7ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mLesson Load (0.5ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:27:59.370047"], ["updated_at", "2015-04-04 04:27:59.370047"]]
+  [1m[35m (17.3ms)[0m  COMMIT
+  [1m[36mLesson Load (0.8ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mLesson Load (0.5ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>"1", "realacesubmit"=>"public class HelloWorld {\n          public static void main(String[] args) {\n              System.out.println(\"Hello World\");\n          }\n      }"}
+Completed 500 Internal Server Error in 1ms
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:28:53.301267"], ["updated_at", "2015-04-04 04:28:53.301267"]]
+  [1m[35m (26.1ms)[0m  COMMIT
+  [1m[36mLesson Load (0.7ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  BEGIN
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mLesson Load (0.4ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>"1", "realacesubmit"=>"public class HelloWorld {\n          public static void main(String[] args) {\n              System.out.println(\"Hello World\");\n          }\n      }"}
+Completed 500 Internal Server Error in 1ms
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:32:00.568143"], ["updated_at", "2015-04-04 04:32:00.568143"]]
+  [1m[35m (17.0ms)[0m  COMMIT
+  [1m[36mLesson Load (0.7ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:32:00.615547"], ["updated_at", "2015-04-04 04:32:00.615547"]]
+  [1m[35m (7.9ms)[0m  COMMIT
+  [1m[36mLesson Load (0.7ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  BEGIN
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>"1", "realacesubmit"=>"public class HelloWorld {\n          public static void main(String[] args) {\n              System.out.println(\"Hello World\");\n          }\n      }"}
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:34:51.880216"], ["updated_at", "2015-04-04 04:34:51.880216"]]
+  [1m[35m (20.6ms)[0m  COMMIT
+  [1m[36mLesson Load (0.8ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:34:51.934991"], ["updated_at", "2015-04-04 04:34:51.934991"]]
+  [1m[35m (3.4ms)[0m  COMMIT
+  [1m[36mLesson Load (0.6ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>"1", "realacesubmit"=>"public class HelloWorld {\n          public static void main(String[] args) {\n              System.out.println(\"Hello World\");\n          }\n      }"}
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:36:31.269966"], ["updated_at", "2015-04-04 04:36:31.269966"]]
+  [1m[35m (12.8ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:36:31.309237"], ["updated_at", "2015-04-04 04:36:31.309237"]]
+  [1m[36m (11.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mLesson Load (0.7ms)[0m  SELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mLesson Load (0.5ms)[0m  SELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1  [["id", 1]]
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>"1", "realacesubmit"=>"public class HelloWorld {\n          public static void main(String[] args) {\n              System.out.println(\"Hello World\");\n          }\n      }"}
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:38:43.731344"], ["updated_at", "2015-04-04 04:38:43.731344"]]
+  [1m[35m (27.7ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:38:43.780997"], ["updated_at", "2015-04-04 04:38:43.780997"]]
+  [1m[36m (13.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mLesson Load (0.7ms)[0m  SELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mLesson Load (0.5ms)[0m  SELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1  [["id", 1]]
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>"1", "realacesubmit"=>"public class HelloWorld {\n          public static void main(String[] args) {\n              System.out.println(\"Hello World\");\n          }\n      }"}
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:39:55.775543"], ["updated_at", "2015-04-04 04:39:55.775543"]]
+  [1m[35m (17.4ms)[0m  COMMIT
+  [1m[36mLesson Load (0.7ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>"1", "realacesubmit"=>"public class HelloWorld {\n          public static void main(String[] args) {\n              System.out.println(\"Hello World\");\n          }\n      }"}
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:41:52.759558"], ["updated_at", "2015-04-04 04:41:52.759558"]]
+  [1m[35m (20.1ms)[0m  COMMIT
+  [1m[36mLesson Load (0.7ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>"1", "realacesubmit"=>"public class HelloWorld {\n          public static void main(String[] args) {\n              System.out.println(\"Hello World\");\n          }\n      }"}
+  Rendered lessons/submit.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:46:49.865964"], ["updated_at", "2015-04-04 04:46:49.865964"]]
+  [1m[35m (22.1ms)[0m  COMMIT
+  [1m[36mLesson Load (0.7ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>"1", "realacesubmit"=>"public class HelloWorld {\n          public static void main(String[] args) {\n              System.out.println(\"Hello World\");\n          }\n      }"}
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:49:29.887490"], ["updated_at", "2015-04-04 04:49:29.887490"]]
+  [1m[35m (17.0ms)[0m  COMMIT
+  [1m[36mLesson Load (0.6ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  BEGIN
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>nil, "realacesubmit"=>"public class HelloWorld {\n          public static void main(String[] args) {\n              System.out.println(\"Hello World\");\n          }\n      }"}
+Completed 500 Internal Server Error in 2ms
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:51:31.415817"], ["updated_at", "2015-04-04 04:51:31.415817"]]
+  [1m[35m (19.8ms)[0m  COMMIT
+  [1m[36mLesson Load (0.7ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>nil, "realacesubmit"=>"public class HelloWorld {\n          public static void main(String[] args) {\n              System.out.println(\"Hello World\");\n          }\n      }"}
+  [1m[36mLesson Load (0.5ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 2ms
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:52:35.040161"], ["updated_at", "2015-04-04 04:52:35.040161"]]
+  [1m[35m (20.4ms)[0m  COMMIT
+  [1m[36mLesson Load (0.6ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:52:35.124402"], ["updated_at", "2015-04-04 04:52:35.124402"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>"31", "realacesubmit"=>"public class HelloWorld {\n          public static void main(String[] args) {\n              System.out.println(\"Hello World\");\n          }\n      }"}
+  [1m[35mLesson Load (0.5ms)[0m  SELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1  [["id", 31]]
+  Rendered lessons/submit.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 2700ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:56:25.909957"], ["updated_at", "2015-04-04 04:56:25.909957"]]
+  [1m[35m (19.0ms)[0m  COMMIT
+  [1m[36mLesson Load (0.6ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>nil, "realacesubmit"=>nil}
+  Rendered lessons/submit.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:56:56.871415"], ["updated_at", "2015-04-04 04:56:56.871415"]]
+  [1m[35m (21.2ms)[0m  COMMIT
+  [1m[36mLesson Load (0.6ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>nil, "realacesubmit"=>nil}
+  Rendered lessons/submit.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-04 04:57:53.619543"], ["updated_at", "2015-04-04 04:57:53.619543"]]
+  [1m[35m (18.6ms)[0m  COMMIT
+  [1m[36mLesson Load (0.6ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>nil, "realacesubmit"=>nil}
+  Rendered lessons/submit.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
