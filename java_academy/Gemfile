@@ -30,7 +30,7 @@ gem "paperclip", "~> 4.2"
 gem 'haml-rails'
 
 # Use simplecov to output coverage to html file
-gem 'simplecov'
+gem 'simplecov', :require => false
 gem 'simplecov-rcov'
 
 # Use ActiveModel has_secure_password
