@@ -5,7 +5,6 @@ ruby '2.2.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 
-gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -60,5 +59,10 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'bullet'
+
+end 
+
+group :production do
+  gem 'pg'
 end
 
