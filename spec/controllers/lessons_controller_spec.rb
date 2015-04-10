@@ -31,7 +31,7 @@ RSpec.describe LessonsController, type: :controller do
       it "should show success flash message" do
         fakeresults = double('lesson1') 
         expect(Lesson).to receive_message_chain(:find, :check_submission).and_return(fakeresults) 
-        fakeresults.stub(:[]).with(:stdout).and_return("not nil")
+        allow(fakeresults).to receive(:[]).with(:stdout).and_return("not nil")
         code = "Hello World" 
         post :submit, {:lessonid => 1, :realacesubmit => code}
         expect(response.status).to eq(200)
@@ -41,7 +41,7 @@ RSpec.describe LessonsController, type: :controller do
       it "should show failed flash message" do 
         fakeresults = double('lesson1')
         expect(Lesson).to receive_message_chain(:find, :check_submission).and_return(fakeresults) 
-        fakeresults.stub(:[]).with(:stdout).and_return(nil)
+        allow(fakeresults).to receive(:[]).with(:stdout).and_return(nil)
         code = "Hello World" 
         post :submit, {:lessonid => 1, :realacesubmit => code}
         expect(response.status).to eq(200)
