@@ -1635,3 +1635,408 @@ Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
   [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
   [1m[35m (0.3ms)[0m  BEGIN
   [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-10 00:46:25.352446"], ["updated_at", "2015-04-10 00:46:25.352446"]]
+  [1m[35m (130.9ms)[0m  commit transaction
+  [1m[36mLesson Load (0.4ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 41ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-10 00:48:01.642886"], ["updated_at", "2015-04-10 00:48:01.642886"]]
+  [1m[35m (133.8ms)[0m  commit transaction
+  [1m[36mLesson Load (0.4ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>"1", "realacesubmit"=>nil}
+  Rendered lessons/submit.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 15ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-10 00:49:00.007338"], ["updated_at", "2015-04-10 00:49:00.007338"]]
+  [1m[35m (199.6ms)[0m  commit transaction
+  [1m[36mLesson Load (0.3ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>"1", "realacesubmit"=>"Hello World"}
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-10 01:02:43.335907"], ["updated_at", "2015-04-10 01:02:43.335907"]]
+  [1m[35m (146.3ms)[0m  commit transaction
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>"1", "realacesubmit"=>"Hello World"}
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-10 01:03:59.102901"], ["updated_at", "2015-04-10 01:03:59.102901"]]
+  [1m[35m (151.4ms)[0m  commit transaction
+  [1m[36mLesson Load (0.4ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>"1", "realacesubmit"=>"Hello World"}
+  Rendered lessons/submit.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-10 01:05:47.735874"], ["updated_at", "2015-04-10 01:05:47.735874"]]
+  [1m[35m (133.3ms)[0m  commit transaction
+  [1m[36mLesson Load (0.4ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>"1", "realacesubmit"=>"Hello World"}
+  Rendered lessons/submit.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-10 01:09:16.122343"], ["updated_at", "2015-04-10 01:09:16.122343"]]
+  [1m[35m (137.2ms)[0m  commit transaction
+  [1m[36mLesson Load (0.4ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-10 01:10:20.736524"], ["updated_at", "2015-04-10 01:10:20.736524"]]
+  [1m[35m (153.7ms)[0m  commit transaction
+  [1m[36mLesson Load (0.4ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>"1", "realacesubmit"=>"Hello World"}
+  Rendered lessons/submit.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-10 01:11:13.446313"], ["updated_at", "2015-04-10 01:11:13.446313"]]
+  [1m[35m (142.6ms)[0m  commit transaction
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>"1", "realacesubmit"=>"Hello World"}
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-10 01:12:03.311017"], ["updated_at", "2015-04-10 01:12:03.311017"]]
+  [1m[35m (152.5ms)[0m  commit transaction
+  [1m[36mLesson Load (0.4ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>"1", "realacesubmit"=>"Hello World"}
+  Rendered lessons/submit.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-10 01:18:51.096439"], ["updated_at", "2015-04-10 01:18:51.096439"]]
+  [1m[35m (142.5ms)[0m  commit transaction
+  [1m[36mLesson Load (0.4ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>"1", "realacesubmit"=>"Hello World"}
+  Rendered lessons/submit.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>"1", "realacesubmit"=>"Hello World"}
+  Rendered lessons/submit.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
