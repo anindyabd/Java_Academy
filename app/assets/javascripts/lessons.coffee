@@ -2,10 +2,10 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$(document).ready -> 
+jQuery(document).ready -> 
     editor = ace.edit("editor");
     editor.setTheme("ace/theme/monokai");
     editor.getSession().setMode("ace/mode/java");
-    document.getElementById("submit_button").addEventListener "click", () ->
-        document.getElementById("realacesubmit").value = editor.getValue();
-        document.getElementById("form_tag_id").submit();
+    jQuery("#submit_button").click ->
+        jQuery("#realacesubmit").val(editor.getValue());
+        jQuery("#form_tag_id").submit();
