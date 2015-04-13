@@ -252,3 +252,10 @@ end
 Then /^show me the page$/ do
   save_and_open_page
 end
+
+Given /^these lessons:$/i do |table|
+  table.hashes.each do |fhash|
+    Lesson.create!(fhash) 
+  end
+end
+
