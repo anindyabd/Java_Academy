@@ -54,7 +54,7 @@ RSpec.describe LessonsController, type: :controller do
  	    end
     end
     context "if code was submitted successfully" do 
-      it "should show failed success message" do 
+      it "should show success flash message" do 
         allow(@fakeresults).to receive(:[]).with(:error).and_return(nil)
         post :submit, {:lessonid => 1, :realacesubmit => @code}
         expect(response.status).to eq(200)
