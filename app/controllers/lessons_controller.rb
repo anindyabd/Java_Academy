@@ -11,10 +11,11 @@ class LessonsController < ApplicationController
     def submit
         if params[:realacesubmit] != nil and params[:realacesubmit] != ""
             @result = Lesson.find(params[:lessonid]).check_submission(params[:realacesubmit]) 
-            if @result[:stdout] != nil 
-                flash[:notice] = "Your code executed successfully!" 
+            # Check if the code was sent to hackerrank API
+            if @result[:error] == nil 
+                flash[:notice] = "Your code was submitted successfully!" 
             else 
-                flash[:notice] = "Your code did not compile successfully. There must be a syntax error somewhere..."
+                flash[:notice] = "Your code submitted successfully"
             end
         end
     end 

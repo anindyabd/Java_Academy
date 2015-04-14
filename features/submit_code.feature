@@ -17,3 +17,12 @@ Feature: Ability to submit code
     Then I should see "Results"
     And I should see "We could not run your code"
     And I should see "Return to list of lessons"
+
+  Scenario:
+    Given I am on the lessons page
+    When I follow "Lesson 100"
+    Then I should see "Submit"
+    And I enter the right code in the box
+    And I press "Submit" 
+    Then I should see "Results"
+    And I should see "Your code executed successfully"

@@ -19,3 +19,11 @@ Feature: Display output of running code to user
     And I should see "Return to list of lessons"
     When I follow "Return to list of lessons"
     Then I should see "Lesson 100" 
+
+  Scenario:
+    Given I am on "Lesson 100"
+    When I enter the right code
+    And I press "Submit"
+    Then I should see "Results"
+    And I should see "Your code executed successfully"
+    And I should see the number of tests passed

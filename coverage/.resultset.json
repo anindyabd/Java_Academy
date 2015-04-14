@@ -1,11 +1,11 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/aguha/Java_Academy/app/helpers/application_helper.rb": [
+      "/home/ndminh92/COSC480/Java_Academy/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/aguha/Java_Academy/app/helpers/lessons_helper.rb": [
+      "/home/ndminh92/COSC480/Java_Academy/app/helpers/lessons_helper.rb": [
         1,
         1,
         1,
@@ -14,11 +14,11 @@
         null,
         null
       ],
-      "/home/aguha/Java_Academy/app/helpers/users_helper.rb": [
+      "/home/ndminh92/COSC480/Java_Academy/app/helpers/users_helper.rb": [
         1,
         null
       ],
-      "/home/aguha/Java_Academy/app/controllers/lessons_controller.rb": [
+      "/home/ndminh92/COSC480/Java_Academy/app/controllers/lessons_controller.rb": [
         1,
         null,
         1,
@@ -41,18 +41,18 @@
         null,
         null
       ],
-      "/home/aguha/Java_Academy/app/controllers/application_controller.rb": [
+      "/home/ndminh92/COSC480/Java_Academy/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/home/aguha/Java_Academy/app/controllers/users_controller.rb": [
+      "/home/ndminh92/COSC480/Java_Academy/app/controllers/users_controller.rb": [
         1,
         null
       ],
-      "/home/aguha/Java_Academy/app/models/lesson.rb": [
+      "/home/ndminh92/COSC480/Java_Academy/app/models/lesson.rb": [
         1,
         1,
         1,
@@ -116,7 +116,7 @@
         null,
         null
       ],
-      "/home/aguha/Java_Academy/app/models/record.rb": [
+      "/home/ndminh92/COSC480/Java_Academy/app/models/record.rb": [
         1,
         1,
         1,
@@ -125,7 +125,7 @@
         null,
         null
       ],
-      "/home/aguha/Java_Academy/app/models/user.rb": [
+      "/home/ndminh92/COSC480/Java_Academy/app/models/user.rb": [
         1,
         1,
         1,
@@ -134,11 +134,11 @@
         null
       ]
     },
-    "timestamp": 1428886478
+    "timestamp": 1428935192
   },
   "Cucumber Features": {
     "coverage": {
-      "/home/aguha/Java_Academy/app/models/lesson.rb": [
+      "/home/ndminh92/COSC480/Java_Academy/app/models/lesson.rb": [
         1,
         1,
         1,
@@ -202,7 +202,7 @@
         null,
         null
       ],
-      "/home/aguha/Java_Academy/app/controllers/lessons_controller.rb": [
+      "/home/ndminh92/COSC480/Java_Academy/app/controllers/lessons_controller.rb": [
         1,
         null,
         1,
@@ -225,18 +225,18 @@
         null,
         null
       ],
-      "/home/aguha/Java_Academy/app/controllers/application_controller.rb": [
+      "/home/ndminh92/COSC480/Java_Academy/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/home/aguha/Java_Academy/app/helpers/application_helper.rb": [
+      "/home/ndminh92/COSC480/Java_Academy/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/aguha/Java_Academy/app/helpers/lessons_helper.rb": [
+      "/home/ndminh92/COSC480/Java_Academy/app/helpers/lessons_helper.rb": [
         1,
         1,
         1,
@@ -245,11 +245,11 @@
         null,
         null
       ],
-      "/home/aguha/Java_Academy/app/helpers/users_helper.rb": [
+      "/home/ndminh92/COSC480/Java_Academy/app/helpers/users_helper.rb": [
         1,
         null
       ]
     },
-    "timestamp": 1428886456
+    "timestamp": 1428935207
   }
 }

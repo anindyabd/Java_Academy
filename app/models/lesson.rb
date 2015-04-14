@@ -20,9 +20,11 @@ class Lesson < ActiveRecord::Base
         #                   not to confuse with :stderr
         result = {}
         num_tests = testcases.length
-        if response == nil # Error with HTTP POST
+        if response == nil 
+        # Error with HTTP POST
             result[:error] = "Error: Could not submit the code"
         else
+        # No error with HTTP, error within code still possible
             result[:testspassed] = Array.new(num_tests)
             result[:stdout] = response["stdout"]
             result[:stderr] = response["stderr"]

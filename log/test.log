@@ -5062,3 +5062,186 @@ Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "lessons" ("number", "name", "description", "instruction", "skeleton_code", "testcases", "expectedresults", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["number", 1], ["name", "Hello World!"], ["description", "Printing strings in Java"], ["instruction", "In Java, you can print to console by using the \n                        System.out.println call. Try printing the string\n                        \"Hello World!\" to the screen by putting the right\n                        parameter in the coding window."], ["skeleton_code", "public class HelloWorld {\n\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n    }\n\n}"], ["testcases", "---\n- '1'\n- '2'\n- aa\n"], ["expectedresults", "---\n- |\n  Hello World\n- |\n  Hello World\n- |\n  Hello World\n"], ["created_at", "2015-04-13 14:26:24.261443"], ["updated_at", "2015-04-13 14:26:24.261443"]]
+  [1m[35m (119.4ms)[0m  commit transaction
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by LessonsController#index as HTML
+  Rendered lessons/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 44ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered lessons/show.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>"1", "realacesubmit"=>"Hello World"}
+  Rendered lessons/submit.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by LessonsController#submit as HTML
+  Parameters: {"lessonid"=>"1", "realacesubmit"=>"Hello World"}
+  Rendered lessons/submit.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "lessons" ("name", "number", "description", "skeleton_code", "expectedresults", "testcases", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Hello World"], ["number", 100], ["description", "Write Hello World"], ["skeleton_code", "skeleton code"], ["expectedresults", "--- Hi\n...\n"], ["testcases", "--- '1'\n"], ["created_at", "2015-04-13 14:26:45.817624"], ["updated_at", "2015-04-13 14:26:45.817624"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "lessons" ("name", "number", "description", "skeleton_code", "expectedresults", "testcases", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Next Lesson"], ["number", 200], ["description", "Another Lesson"], ["skeleton_code", "more code"], ["expectedresults", "--- Stuff\n...\n"], ["testcases", "--- '2'\n"], ["created_at", "2015-04-13 14:26:45.822276"], ["updated_at", "2015-04-13 14:26:45.822276"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/lessons" for 127.0.0.1 at 2015-04-13 10:26:45 -0400
+Processing by LessonsController#index as HTML
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered lessons/index.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 728ms (Views: 709.3ms | ActiveRecord: 0.2ms)
+Started GET "/lessons/3" for 127.0.0.1 at 2015-04-13 10:26:46 -0400
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mLesson Load (0.1ms)[0m  SELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered lessons/show.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 0.1ms)
+Started POST "/lessons/submit" for 127.0.0.1 at 2015-04-13 10:26:46 -0400
+Processing by LessonsController#submit as HTML
+  Parameters: {"utf8"=>"✓", "realacesubmit"=>"{:id=>\"realacesubmit\"}", "lessonid"=>"3"}
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered lessons/submit.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 122ms (Views: 5.8ms | ActiveRecord: 0.1ms)
+Started GET "/lessons" for 127.0.0.1 at 2015-04-13 10:26:46 -0400
+Processing by LessonsController#index as HTML
+  [1m[35mLesson Load (0.1ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered lessons/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "lessons" ("name", "number", "description", "skeleton_code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Hello World"], ["number", 100], ["description", "Write Hello World"], ["skeleton_code", "skeleton code"], ["created_at", "2015-04-13 14:26:46.763421"], ["updated_at", "2015-04-13 14:26:46.763421"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "lessons" ("name", "number", "description", "skeleton_code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Next Lesson"], ["number", 200], ["description", "Another Lesson"], ["skeleton_code", "more code"], ["created_at", "2015-04-13 14:26:46.765033"], ["updated_at", "2015-04-13 14:26:46.765033"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/lessons" for 127.0.0.1 at 2015-04-13 10:26:46 -0400
+Processing by LessonsController#index as HTML
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered lessons/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+Started GET "/lessons/3" for 127.0.0.1 at 2015-04-13 10:26:46 -0400
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mLesson Load (0.0ms)[0m  SELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered lessons/show.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "lessons" ("name", "number", "description", "skeleton_code", "expectedresults", "testcases", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Hello World"], ["number", 100], ["description", "Write Hello World"], ["skeleton_code", "skeleton code"], ["expectedresults", "--- Hi\n...\n"], ["testcases", "--- '1'\n"], ["created_at", "2015-04-13 14:26:46.784138"], ["updated_at", "2015-04-13 14:26:46.784138"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "lessons" ("name", "number", "description", "skeleton_code", "expectedresults", "testcases", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Next Lesson"], ["number", 200], ["description", "Another Lesson"], ["skeleton_code", "more code"], ["expectedresults", "--- Stuff\n...\n"], ["testcases", "--- '2'\n"], ["created_at", "2015-04-13 14:26:46.787393"], ["updated_at", "2015-04-13 14:26:46.787393"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/lessons" for 127.0.0.1 at 2015-04-13 10:26:46 -0400
+Processing by LessonsController#index as HTML
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered lessons/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+Started GET "/lessons/3" for 127.0.0.1 at 2015-04-13 10:26:46 -0400
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mLesson Load (0.0ms)[0m  SELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered lessons/show.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+Started GET "/lessons" for 127.0.0.1 at 2015-04-13 10:26:46 -0400
+Processing by LessonsController#index as HTML
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered lessons/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+Started GET "/lessons/4" for 127.0.0.1 at 2015-04-13 10:26:46 -0400
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mLesson Load (0.0ms)[0m  SELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered lessons/show.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "lessons" ("name", "number", "description", "skeleton_code", "expectedresults", "testcases", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Hello World"], ["number", 100], ["description", "Write Hello World"], ["skeleton_code", "skeleton code"], ["expectedresults", "--- Hi\n...\n"], ["testcases", "--- '1'\n"], ["created_at", "2015-04-13 14:26:46.817354"], ["updated_at", "2015-04-13 14:26:46.817354"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "lessons" ("name", "number", "description", "skeleton_code", "expectedresults", "testcases", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Next Lesson"], ["number", 200], ["description", "Another Lesson"], ["skeleton_code", "more code"], ["expectedresults", "--- Stuff\n...\n"], ["testcases", "--- '2'\n"], ["created_at", "2015-04-13 14:26:46.820683"], ["updated_at", "2015-04-13 14:26:46.820683"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/lessons" for 127.0.0.1 at 2015-04-13 10:26:46 -0400
+Processing by LessonsController#index as HTML
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered lessons/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+Started GET "/lessons/3" for 127.0.0.1 at 2015-04-13 10:26:46 -0400
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mLesson Load (0.0ms)[0m  SELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered lessons/show.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+Started POST "/lessons/submit" for 127.0.0.1 at 2015-04-13 10:26:46 -0400
+Processing by LessonsController#submit as HTML
+  Parameters: {"utf8"=>"✓", "realacesubmit"=>"{:id=>\"realacesubmit\"}", "lessonid"=>"3"}
+  [1m[36mLesson Load (0.0ms)[0m  [1mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered lessons/submit.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 118ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "lessons" ("name", "number", "description", "skeleton_code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Hello World"], ["number", 100], ["description", "Write Hello World"], ["skeleton_code", "skeleton code"], ["created_at", "2015-04-13 14:26:46.970692"], ["updated_at", "2015-04-13 14:26:46.970692"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/lessons" for 127.0.0.1 at 2015-04-13 10:26:46 -0400
+Processing by LessonsController#index as HTML
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered lessons/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+Started GET "/lessons/3" for 127.0.0.1 at 2015-04-13 10:26:46 -0400
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mLesson Load (0.0ms)[0m  SELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered lessons/show.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m

@@ -14,9 +14,7 @@
     %p
     %h4= @result[:stdout][0]
     %p
-    - if @result[:testspassed][0]
-      The code passed the test.
-    - else
-      The code did not pass the test
+      The tests results for your submission
+      = @result[:testspassed].to_s 
 
 %p= link_to "Return to list of lessons", lessons_path

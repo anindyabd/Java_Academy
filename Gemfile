@@ -28,9 +28,8 @@ gem "paperclip", "~> 4.2"
 # Use haml for HTML templates
 gem 'haml-rails'
 
-# Use simplecov to output coverage to html file
-gem 'simplecov', :require => false
-gem 'simplecov-rcov'
+# Use Devise for authentication
+gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -52,6 +51,7 @@ group :development, :test do
   gem 'spring'
  
   gem 'sqlite3'
+  
   # Testing gems
   gem 'rspec-rails'
   gem 'cucumber-rails', :require => false
@@ -60,6 +60,11 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'bullet'
   gem 'selenium-webdriver'
+  
+  # Use simplecov to output coverage to html file
+  gem 'simplecov', :require => false
+  gem 'simplecov-rcov'
+
 end 
 
 group :production do
