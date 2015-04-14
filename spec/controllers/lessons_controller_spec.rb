@@ -8,6 +8,7 @@ RSpec.describe LessonsController, type: :controller do
       allow_message_expectations_on_nil
       allow(request.env['warden']).to receive(:authenticate!) { user }
       allow(controller).to receive(:current_user) { user }
+      
       get :index
       expect(response.status).to eq(200)
     end
