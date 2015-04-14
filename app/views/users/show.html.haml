@@ -1,0 +1,19 @@
+#profile
+
+ .left.column
+   =image_tag{"#{@user.name}", :class = "avatar", :src = @user.avatar(:thumb)} 
+ .right.column
+   %dl 
+     %dt Username:
+     %dd= @user.name
+     %dt Email:
+     %dd= @user.email
+     = link_to "Change Password", #somepath
+
+  %table.completed_exercies
+  	%tr.exercises_header
+  	  %th= "Exercises"
+
+  	%tbody
+  	  - @user.exercises.each do |exercise|
+  	  	%td= link_to "#{exercise}"
