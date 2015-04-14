@@ -1,5 +1,5 @@
 class LessonsController < ApplicationController
-
+    before_action :authenticate_user!, only: [:show, :submim]
     def index
        @lessons = Lesson.all  
     end 

@@ -1,5 +1,13 @@
 %h1 JavaAcademy
 %p Welcome to JavaAcademy! Here we teach you the basics of the programming language Java. 
+- if user_signed_in?
+  %p= "Welcome " << current_user.email 
+  %p= link_to 'Sign out', destroy_user_session_path, method: 'delete'
+- else
+  %li= link_to 'Sign up', new_user_registration_url
+  %li= link_to 'Sign in', new_user_session_url
+
+
 %p Click on a lesson below to continue!
 %ul 
   - @lessons.each do |lesson|
