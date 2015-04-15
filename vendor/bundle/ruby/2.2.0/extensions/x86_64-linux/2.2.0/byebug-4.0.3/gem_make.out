@@ -1,0 +1,15 @@
+/home/aguha/.rvm/rubies/ruby-2.2.0/bin/ruby -r ./siteconf20150414-3660-uu93rm.rb extconf.rb 
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling byebug.c
+compiling locker.c
+compiling threads.c
+compiling breakpoint.c
+compiling context.c
+linking shared-object byebug/byebug.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20150414-3660-fqkoh7/byebug
