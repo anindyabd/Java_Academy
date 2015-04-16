@@ -43,3 +43,4 @@ Thumbs.db
 /db/*.sqlite3
 /public/system
 /coverage/
+/vendor/bundle
