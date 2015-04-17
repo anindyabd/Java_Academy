@@ -11,7 +11,6 @@ def github
         session["devise.github_data"] = request.env["omniauth.auth"]
         redirect_to lessons_path 
     end
-
 end
 
 end
