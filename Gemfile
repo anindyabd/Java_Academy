@@ -31,6 +31,12 @@ gem 'haml-rails'
 # Use Devise for authentication
 gem 'devise'
 
+# Use omniauth
+gem 'omniauth'
+
+# Use Google devise omniauth strategy for login 
+gem 'omniauth-github'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
