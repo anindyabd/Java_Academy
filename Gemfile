@@ -58,6 +58,9 @@ group :development, :test do
  
   gem 'sqlite3'
   
+  # Converting erb templates to haml
+  gem 'erb2haml'
+  
   # Testing gems
   gem 'rspec-rails'
   gem 'cucumber-rails', :require => false
