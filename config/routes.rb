@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   # Limit lessons action to index and show for the time being
   resources :lessons, only: [:index, :show]
-  #resources :users
+  resources :users
 
   post 'lessons/submit', to: 'lessons#submit' 
 end
