@@ -5,30 +5,29 @@
 #profile
 { 
 
-	border: {
-    	width: 1px;
-    	color: #ccc;
-    	style: solid;
- 	 
-		position: absolute;
-		left: 100 px;
-		top: 10 px;
-	}
+    border: {
+    width: 1px;
+    color: #ccc;
+    style: solid;
+    position: absolute;
+    left: 100px;
+    top: 10px;
+    }
 
 }
 
 #avatar
 {
-	float: left;
-	padding: 10 px;
-	top: 20px;
-	width: 30%;
+    float: left;
+    padding: 10px;
+    top: 20px;
+    width: 30%;
 
 }
 
 #info
 {
-	float: right;
-	padding 10px;
+    float: right;
+    padding: 10px;
 
 }
