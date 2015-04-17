@@ -12,7 +12,6 @@ RSpec.describe LessonsController, type: :controller do
       get :index
       expect(response.status).to eq(200)
     end
-
   end
 
   describe "GET #show" do
@@ -25,15 +24,15 @@ RSpec.describe LessonsController, type: :controller do
     end 
 
     it "routes correctly" do
-      l = double('lesson')
-      expect(Lesson).to receive(:find).with("1") { l }
+      lesson = double('lesson')
+      expect(Lesson).to receive(:find).with("1") { lesson }
       get :show, id: 1
       expect(response.status).to eq(200)
     end
 
     it "renders the show template" do
-      l = double('lesson')
-      expect(Lesson).to receive(:find).with("1") { l }
+      lesson = double('lesson')
+      expect(Lesson).to receive(:find).with("1") { lesson }
       get :show, id: 1
       expect(response).to render_template(:show)
     end 
@@ -47,12 +46,12 @@ RSpec.describe LessonsController, type: :controller do
       expect(Lesson).to receive_message_chain(:find, :check_submission).and_return(@fakeresults) 
     end
 
-  	context "if could not submit code" do
+    context "if could not submit code" do
       it "should show failure flash message" do
         allow(@fakeresults).to receive(:[]).with(:error).and_return("not nil")
         post :submit, {:lessonid => 1, :realacesubmit => @code}
         expect(response.status).to eq(200)
- 	    end
+      end
     end
     context "if code was submitted successfully" do 
       it "should show success flash message" do 
