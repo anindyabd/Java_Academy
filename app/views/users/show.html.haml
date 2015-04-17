@@ -8,7 +8,7 @@
      %dd= @user.name
      %dt Email:
      %dd= @user.email
-     = link_to "Change Password", #somepath
+     = link_to "Change Password", edit_user_password_path, method: 'get'
 
   %table.completed_exercies
   	%tr.exercises_header
