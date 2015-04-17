@@ -13,9 +13,5 @@ Feature: Text editor for adding code
     When I follow "Lesson 100"
     Then I should see "skeleton code"
 
-  Scenario:
-    Given I am on the "Lesson 100" page
-    Then I should see the editor
-    And I should be able to type code into the editor
 
 

@@ -7,15 +7,17 @@ Feature: Sign up page
 
   Scenario:
     Given I am on the homepage
-    And I press "Sign up"
-    Then I should be on the "Sign up" page
-    And I should see "Submit"
+    When I follow "Sign up"
+    Then I should see "Sign up"
+    And I should see "Submit" button
 
   Scenario:
-    Given I am on the "Sign up" page
-    And I enter my information
+    Given I am on the homepage
+    When I follow "Sign up" 
+    And I fill in "Email" with "dnguyen@colgate.edu"
+    And I fill in "Password" with "12345678"
+    And I fill in "Password confirmation" with "12345678" 
     And I press "Submit"
-    Then I should see "Sign up successful"
-    And I should be on my personal page
+    Then I should see "Welcome dnguyen@colgate.edu"
     
   

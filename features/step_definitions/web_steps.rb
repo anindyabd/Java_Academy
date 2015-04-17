@@ -120,6 +120,10 @@ Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
   end
 end
 
+Then /^I should see "([^"]*)" button/ do |name|
+  find_button(name).should_not be_nil
+end
+
 Then /^(?:|I )should not see "([^"]*)"$/ do |text|
   if page.respond_to? :should
     page.should have_no_content(text)
@@ -259,3 +263,8 @@ Given /^these lessons:$/i do |table|
   end
 end
 
+Given /^these users:$/i do |table|
+  table.hashes.each do |fhash|
+    User.create!(fhash) 
+  end
+end

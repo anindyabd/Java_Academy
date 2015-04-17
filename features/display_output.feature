@@ -21,8 +21,9 @@ Feature: Display output of running code to user
     Then I should see "Lesson 100" 
 
   Scenario:
-    Given I am on "Lesson 100"
-    When I enter the right code
+    Given I am on the lessons page
+    When I follow "Lesson 100"
+    And I fill in the text editor with "public static void main(String[] args) {System.out.println("Hi");}}"
     And I press "Submit"
     Then I should see "Results"
     And I should see "Your code executed successfully"
