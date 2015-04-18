@@ -16,7 +16,7 @@ class LessonsController < ApplicationController
       if @result[:error] == nil 
         flash[:notice] = "Your code was submitted successfully!" 
       else 
-        flash[:notice] = "There was a problem submitting your code."
+        flash[:notice] = "There was a problem submitting your code." 
       end
     end
   end 

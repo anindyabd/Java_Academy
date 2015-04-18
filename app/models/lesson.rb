@@ -17,11 +17,15 @@ class Lesson < ActiveRecord::Base
     # :stderr           an array containing stderr of test cases
     # :error            a string containing error with submission process
     #                   not to confuse with :stderr
+    # have to do this to facilitate cucumber testing 
+    if expectedresults.instance_of? String 
+      expectedresults = testcases.split(",") 
+    end 
     result = {}
     num_tests = testcases.length
     if response == nil 
       # Error with HTTP POST
-      result[:error] = "Error: Could not submit the code"
+      result[:error] = "Error: could not submit code." 
     else
       # No error with HTTP, error within code still possible
       result[:testspassed] = Array.new(num_tests)
@@ -45,6 +49,11 @@ class Lesson < ActiveRecord::Base
     # Submit lesson via hackerrank API
     # See https://www.hackerrank.com/api/docs for details
     uri = URI("http://api.hackerrank.com/checker/submission.json")
+    # I have to do this to facilitate cucumber testing. Cucumber isn't 
+    # allowing me to have testcases as an array, so I'm converting here.
+    if testcases.instance_of? String 
+      testcases = testcases.split(",") 
+    end  
     form = {"source" => code, 
             "lang" => 3, # Number code for Java is 3
             "testcases" => testcases.to_json,
@@ -56,7 +65,7 @@ class Lesson < ActiveRecord::Base
     if response.code == "200" # Valid response
       result = JSON.parse(response.body)["result"]
     else
-      result = nil
+      result = nil   
     end
   end
 

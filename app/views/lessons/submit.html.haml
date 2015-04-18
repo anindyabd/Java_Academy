@@ -3,6 +3,8 @@
 %p
   - if flash[:notice]
     = flash[:notice]    
+  - if flash[:warning]
+    = flash[:warning]
 
 %p
   - if @result[:stdout] == nil
