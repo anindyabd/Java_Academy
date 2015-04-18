@@ -22,9 +22,16 @@ Feature: Ability to submit code
     Given I am on the lessons page
     When I follow "Lesson 100"
     Then I should see "Submit"
-    And I fill in the hidden field "#realacesubmit" with "public class HelloWorld {public static void main(String[] args){System.out.println(1);}}"
+    And I fill in the hidden field "#realacesubmit" with 
+      """
+      public class HelloWorld { 
+          public static void main(String[] args){
+              System.out.println(1); 
+          } 
+      }
+      """
     And I fill in the hidden field "#lessonid" with "1"
     And I press "Submit"
     Then I should see "Results"
     And I should see "Your code was submitted successfully!"
-    #And I should see "The code returned this on standard output" -- not working, need to figure this out!
+    And I should see "Your code returned this on standard output"

@@ -66,7 +66,12 @@ When /^(?:|I )fill in "([^"]*)" for "([^"]*)"$/ do |value, field|
 end
 
 When /^(?:|I )fill in the hidden field "([^"]*)" with "([^"]*)"$/ do |field, value|
-  find(field, :visible => false).value
+  find(field, :visible => false).set(value)
+  #fill_in(field, :with => value)
+end
+
+When /^(?:|I )fill in the hidden field "([^"]*)" with$/ do |field, value|
+  find(field, :visible => false).set(value)
   #fill_in(field, :with => value)
 end
 

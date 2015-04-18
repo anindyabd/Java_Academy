@@ -69,7 +69,8 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'bullet'
   gem 'selenium-webdriver'
-  
+  gem 'autotest'
+
   # Use simplecov to output coverage to html file
   gem 'simplecov', :require => false
   gem 'simplecov-rcov'
