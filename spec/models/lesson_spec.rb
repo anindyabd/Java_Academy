@@ -15,7 +15,7 @@ RSpec.describe Lesson, type: :model do
     end
 
     it "should return nil when response code is not 200" do
-      testcases = "[\"]"    # Garbade input to get error response
+      testcases = 42    # Garbage input to get error response
                             # Hackerrank actually handle error in code
       response = Lesson.submit_work(code,testcases)
       expect(response).to eq(nil)
@@ -53,9 +53,9 @@ RSpec.describe Lesson, type: :model do
       expect(sbm_result[:testspassed]).to eq([true, true,true])
     end
 
-    it "should return an error messages if the response is nill" do
+    it "should return an error messages if the response is nil" do
       sbm_result = Lesson.test_response(nil,lesson1.testcases,lesson1.expectedresults)
-      expect(sbm_result[:error]).to eq("Error: Could not submit the code")
+      expect(sbm_result[:error]).to eq("Error: could not submit code.")
     end
 
     it "should recognize failed testcase" do

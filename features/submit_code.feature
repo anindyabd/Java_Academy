@@ -5,9 +5,9 @@ Feature: Ability to submit code
 
   Background: The Academy has several lessons
     Given these Lessons:
-     | name         | number  | description       | skeleton_code | expectedresults | testcases | 
-     | Hello World  | 100     | Write Hello World | skeleton code | Hi              | 1         |
-     | Next Lesson  | 200     | Another Lesson    | more code     | Stuff           | 2         |
+     | name         | number  | description       | skeleton_code | expectedresults     | testcases | 
+     | Hello World  | 100     | Write Hello World | skeleton code | 1, 1                | 1,1       |
+     | Next Lesson  | 200     | Another Lesson    | more code     | Stuff               | 2         |
 
   Scenario: 
     Given I am on the lessons page
@@ -22,7 +22,9 @@ Feature: Ability to submit code
     Given I am on the lessons page
     When I follow "Lesson 100"
     Then I should see "Submit"
-    And I enter the right code in the box
-    And I press "Submit" 
+    And I fill in the hidden field "#realacesubmit" with "public class HelloWorld {public static void main(String[] args){System.out.println(1);}}"
+    And I fill in the hidden field "#lessonid" with "1"
+    And I press "Submit"
     Then I should see "Results"
-    And I should see "Your code executed successfully"
+    And I should see "Your code was submitted successfully!"
+    #And I should see "The code returned this on standard output" -- not working, need to figure this out!

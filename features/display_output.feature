@@ -5,9 +5,9 @@ Feature: Display output of running code to user
   
   Background: The Academy has several lessons
     Given these Lessons:
-     | name         | number  | description       | skeleton_code | expectedresults | testcases | 
-     | Hello World  | 100     | Write Hello World | skeleton code | Hi              | 1         |
-     | Next Lesson  | 200     | Another Lesson    | more code     | Stuff           | 2         |
+     | name         | number  | description       | skeleton_code | expectedresults   | testcases  | 
+     | Hello World  | 100     | Write Hello World | skeleton code | ["Hello World\n"] | 1,2,3      |
+     | Next Lesson  | 200     | Another Lesson    | more code     | ["Stuff\n"]       | 2,3,4      |
 
   Scenario: 
     Given I am on the lessons page
@@ -23,8 +23,9 @@ Feature: Display output of running code to user
   Scenario:
     Given I am on the lessons page
     When I follow "Lesson 100"
-    And I fill in the text editor with "public static void main(String[] args) {System.out.println("Hi");}}"
+    And I fill in the hidden field "#realacesubmit" with "hi"
+    And I fill in the hidden field "#lessonid" with "1"
     And I press "Submit"
     Then I should see "Results"
-    And I should see "Your code executed successfully"
-    And I should see the number of tests passed
+    And I should see "Your code was submitted successfully!"
+    And I should see "We could not run your code"

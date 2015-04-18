@@ -3,6 +3,8 @@
 %p
   - if flash[:notice]
     = flash[:notice]    
+  - if flash[:warning]
+    = flash[:warning]
 
 %p
   - if @result[:stdout] == nil
@@ -14,7 +16,7 @@
     %p
     %h4= @result[:stdout][0]
     %p
-      The tests results for your submission
+      The test results for your submission
       = @result[:testspassed].to_s 
 
 %p= link_to "Return to list of lessons", lessons_path

@@ -1,19 +1,17 @@
 #profile
 
- .left.column
-   =image_tag{"#{@user.name}", :class = "avatar", :src = @user.avatar(:thumb)} 
- .right.column
-   %dl 
-     %dt Username:
-     %dd= @user.name
-     %dt Email:
-     %dd= @user.email
-     = link_to "Change Password", #somepath
+  .right.column
+    %dl 
+      %dt Name:
+      %dd= @user.name
+      %dt Email:
+      %dd= @user.email
 
-  %table.completed_exercies
-  	%tr.exercises_header
-  	  %th= "Exercises"
+  %p You have completed the following lessons
 
-  	%tbody
-  	  - @user.exercises.each do |exercise|
-  	  	%td= link_to "#{exercise}"
+  %ul 
+    - @user.lessons.each do |lesson|
+      %li= link_to "Lesson " << lesson.number.to_s, lesson_path(lesson.id), "data-no-turbolink" => true  
+
+  %p= link_to "Return to list of lessons", lessons_path  
+  

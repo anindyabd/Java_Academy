@@ -1,4 +1,9 @@
 %h2 Log in
+%p 
+  - if flash[:notice]
+    = flash[:notice]
+  - if flash[:alert]
+    = flash[:alert]
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
   .field
     = f.label :email
