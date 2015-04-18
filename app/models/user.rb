@@ -15,4 +15,12 @@ class User < ActiveRecord::Base
     end
   end
 
+  def add_lesson(lessonid)
+    if self.lessons.where( :id => lessonid ).blank?
+      self.lessons << Lesson.find(lessonid) 
+    else 
+      return
+    end 
+  end
+
 end

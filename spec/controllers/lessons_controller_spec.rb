@@ -41,6 +41,8 @@ RSpec.describe LessonsController, type: :controller do
   describe "POST #submit" do
 
     before(:each) do 
+      @user = User.new 
+      sign_in @user 
       @fakeresults = double('lesson1') 
       @code = "Hello World"
       expect(Lesson).to receive_message_chain(:find, :check_submission).and_return(@fakeresults) 
