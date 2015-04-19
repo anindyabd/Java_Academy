@@ -2,23 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+p {
+    font-size: 15px;
+}
+
 #editor {
     /* margin: 0; */
-    position: absolute;
-    top: 0;
+    position: relative;
+    /* top: 0; */
     /*bottom: 30%;*/
-    left: 30%;
-    right: 0;
-    height: 450px;
+    /* top: 10%; */ 
+    left: 0;
+    right: 0; 
+    bottom: 0;
+    height: 600px;
 }
 
 #lesson {
     float: left;
-    width: 28%;
+    width: 40%;
     padding: 5px; 
 }
 
 #submit_button {
-    float: left;
-    margin-top: 500px;
+    /* float: left; */
+    /* margin-top: 510px; */
 }
+

@@ -1,4 +1,4 @@
-%h1 JavaAcademy
+%h1 Java Academy
 
 %p 
   - if flash[:notice]
@@ -7,23 +7,19 @@
     = flash[:alert]
 
 
-%p Welcome to JavaAcademy! Here we teach you the basics of the programming language Java. 
+%p Welcome to Java Academy! Here we teach you the basics of the programming language Java. 
 
- 
+
 - if user_signed_in?
   %p= "Welcome " << current_user.email
-  %p= link_to 'Sign out', destroy_user_session_path, method: 'delete'
   %p= link_to 'Profile page', user_path(current_user.id) 
-- else
-  %li= link_to 'Sign up', new_user_registration_url
-  %li= link_to 'Sign in', new_user_session_url
-  %li= link_to 'Sign in with Github', user_omniauth_authorize_path(:github)
+
 
 
 %p Click on a lesson below to continue!
 %ul 
   - @lessons.each do |lesson|
     - # I'll fix this turbolink issue later. Or someone could try messing with it.
-    %li= link_to "Lesson " << lesson.number.to_s, lesson_path(lesson), "data-no-turbolink" => true  
+    %li= link_to lesson.name, lesson_path(lesson), "data-no-turbolink" => true  
 
 %p Note: The sign in with Github feature currently does not work on Heroku! Regular sign in still works, though!

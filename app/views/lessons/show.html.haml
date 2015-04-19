@@ -5,24 +5,29 @@
     %title Editor
   %body
     #lesson
-      %h1 Java Academy
-      %p= "Lesson " << @lesson.number.to_s
-      %p= @lesson.description
+      %h2= "Lesson " << @lesson.number.to_s
+      %h2= @lesson.description
       %p= @lesson.instruction
       - #%p= @lesson.testcases
       - #%p= @lesson.expectedresults
       %br 
       %br 
       %br 
+      %p Press the submit button after you're done writing your code! 
+      - # CoffeeScript detects when submit button is clicked, populates hidden input with editor data, and submits
+
+      = form_tag 'submit', :id => "form_tag_id" do 
+        - # = label_tag "realacesubmit" 
+        = hidden_field_tag "realacesubmit", :id => "realacesubmit"
+        - # = label_tag "lessonid"
+        = hidden_field_tag "lessonid", params[:id], :id => "lessonid" 
+        %button#submit_button.btn.btn-success.btn-lg Submit 
+       
       %p= link_to "Return to list of lessons", lessons_path
+
     #editor
       %pre=@lesson.skeleton_code
 
-    = form_tag 'submit', :id => "form_tag_id" do 
-      = label_tag "realacesubmit" 
-      = hidden_field_tag "realacesubmit", :id => "realacesubmit"
-      = label_tag "lessonid"
-      = hidden_field_tag "lessonid", params[:id], :id => "lessonid" 
-      - # CoffeeScript detects when submit button is clicked, populates hidden input with editor data, and submits
-      %button#submit_button Submit 
-    - # %script{:charset => "utf-8", :src => "/assets/javascripts/src/ace.js", :type => "text/javascript"}
+    
+
+    

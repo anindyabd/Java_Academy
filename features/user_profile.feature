@@ -18,5 +18,5 @@ Feature: User profile
     And I press "Log in"
     Then I should see "Welcome adam@colgate.edu"
     When I follow "Sign out"
-    Then I should see "Welcome to JavaAcademy"
+    Then I should see "Welcome to Java Academy"
     And I should not see "Welcom adam@colgate.edu"

@@ -6,6 +6,7 @@ jQuery(document).ready ->
     editor = ace.edit("editor");
     editor.setTheme("ace/theme/monokai");
     editor.getSession().setMode("ace/mode/java");
+    document.getElementById('editor').style.fontSize='14px';
     jQuery("#submit_button").click ->
         jQuery("#realacesubmit").val(editor.getValue());
         jQuery("#form_tag_id").submit();

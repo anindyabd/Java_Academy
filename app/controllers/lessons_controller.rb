@@ -18,9 +18,9 @@ class LessonsController < ApplicationController
       @result = Lesson.find(params[:lessonid]).check_submission(params[:realacesubmit]) 
       # Check if the code was sent to hackerrank API
       if @result[:error] == nil 
-        flash[:notice] = "Your code was submitted successfully!" 
+        flash[:note] = "Your code was submitted successfully!" 
       else 
-        flash[:notice] = "There was a problem submitting your code." 
+        flash[:warning] = "There was a problem submitting your code." 
       end
     end
   end 

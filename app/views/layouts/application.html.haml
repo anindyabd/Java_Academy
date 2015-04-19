@@ -2,9 +2,42 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title JavaAcademy
+    %title Java Academy
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    = yield
+    %nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          .navbar-brand= link_to "Java Academy", lessons_path
+        #navbar.navbar-collapse.collapse
+          %ul.nav.navbar-nav
+            %li
+              %a{:href => "#about"} About
+            %li
+              %a{:href => "#contact"} Contact
+            %li.dropdown
+              %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                Lessons 
+                %span.caret
+              %ul.dropdown-menu{:role => "menu"}
+                - @lessons.each do |lesson|
+                  - # I'll fix this turbolink issue later. Or someone could try messing with it.
+                  %li= link_to "Lesson " << lesson.number.to_s, lesson_path(lesson), "data-no-turbolink" => true
+
+          %ul.nav.navbar-nav.navbar-right
+            %li
+            - if user_signed_in?
+              %li= link_to 'Sign out', destroy_user_session_path, method: 'delete'
+              %li= link_to 'Profile page', user_path(current_user.id) 
+            - else
+              %li= link_to 'Sign up', new_user_registration_url
+              %li= link_to 'Sign in', new_user_session_url
+              %li= link_to 'Sign in with Github', user_omniauth_authorize_path(:github)
+        = yield

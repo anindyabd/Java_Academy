@@ -1,8 +1,8 @@
 %h1 Results  
 
 %p
-  - if flash[:notice]
-    = flash[:notice]    
+  - if flash[:note]
+    = flash[:note]    
   - if flash[:warning]
     = flash[:warning]
 
@@ -19,4 +19,5 @@
       The test results for your submission
       = @result[:testspassed].to_s 
 
-%p= link_to "Return to list of lessons", lessons_path
+%p= link_to "Return to list of lessons", lessons_path, "data-no-turbolink" => true  
+
