@@ -1,25 +1,25 @@
-%h1 Java Academy
+.centered   
+  %h1 Java Academy
 
-%p 
+  %p 
   - if flash[:notice]
     = flash[:notice]
   - elsif flash[:alert]
     = flash[:alert]
 
-
-%p Welcome to Java Academy! Here we teach you the basics of the programming language Java. 
-
-
-- if user_signed_in?
-  %p= "Welcome " << current_user.email
-  %p= link_to 'Profile page', user_path(current_user.id) 
+  %p Welcome to Java Academy! Here we teach you the basics of the programming language Java. 
 
 
+  - if user_signed_in?
+    %p= "Welcome " << current_user.email
+    %p= link_to 'Profile page', user_path(current_user.id) 
 
-%p Click on a lesson below to continue!
-%ul 
-  - @lessons.each do |lesson|
-    - # I'll fix this turbolink issue later. Or someone could try messing with it.
-    %li= link_to lesson.name, lesson_path(lesson), "data-no-turbolink" => true  
 
-%p Note: The sign in with Github feature currently does not work on Heroku! Regular sign in still works, though!
+
+  %p Click on a lesson below to continue!
+  %ul 
+    - @lessons.each do |lesson|
+      - # I'll fix this turbolink issue later. Or someone could try messing with it.
+      %li= link_to "Lesson #{lesson.number.to_s}: #{lesson.name}", lesson_path(lesson), "data-no-turbolink" => true  
+
+  %p Note: The sign in with Github feature currently does not work on Heroku! Regular sign in still works, though!

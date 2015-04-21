@@ -9,6 +9,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       set_flash_message(:notice, :success, :kind => "Github") if is_navigational_format?
     else
       session["devise.github_data"] = request.env["omniauth.auth"]
+      flash[:notice] = "Couldn't log in. There's some sort of problem..."
       redirect_to lessons_path 
     end
   end

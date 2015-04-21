@@ -8,10 +8,10 @@ class ApplicationController < ActionController::Base
     @lessons = Lesson.all 
   end
   
-  private
+  #private
   # Overwriting the sign_out redirect path method
-  def after_sign_out_path_for(resource_or_scope)
-    root_path
-  end
+  #def after_sign_out_path_for(resource_or_scope)
+  #  root_path
+  #end
 
 end
