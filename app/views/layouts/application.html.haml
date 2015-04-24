@@ -6,8 +6,10 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    = google_webfonts_link_tag :marck_script
+    = google_webfonts_link_tag :merriweather 
   %body
-    %nav.navbar.navbar-default.navbar-fixed-top
+    %nav.navbar.navbar-default
       .container
         .navbar-header
           %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
@@ -15,7 +17,7 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          .navbar-brand= link_to "Java Academy", lessons_path
+          .navbar-brand#nav-title= link_to "Java Academy", lessons_path
         #navbar.navbar-collapse.collapse
           %ul.nav.navbar-nav
             %li
@@ -40,4 +42,5 @@
               %li= link_to 'Sign up', new_user_registration_url
               %li= link_to 'Sign in', new_user_session_url
               %li= link_to 'Sign in with Github', user_omniauth_authorize_path(:github)
-        = yield
+    .container
+      = yield

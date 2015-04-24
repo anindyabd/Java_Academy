@@ -34,8 +34,11 @@ gem 'devise'
 # Use omniauth
 gem 'omniauth'
 
-# Use Google devise omniauth strategy for login 
+# Use Github devise omniauth strategy for login 
 gem 'omniauth-github'
+
+# Use Google fonts 
+gem 'google-webfonts'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

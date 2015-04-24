@@ -25,3 +25,10 @@ ul
     padding: 0;
 }
 
+#nav-title {
+    font-family: 'Marck Script', cursive;
+} 
+
+#added-space {
+  margin-bottom: 30px;
+}

@@ -2,11 +2,16 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-jQuery(document).ready -> 
+ 
+EditorSetup =  {init: () -> 
     editor = ace.edit("editor");
     editor.setTheme("ace/theme/monokai");
     editor.getSession().setMode("ace/mode/java");
+    editor.setShowPrintMargin(false);
     document.getElementById('editor').style.fontSize='14px';
     jQuery("#submit_button").click ->
         jQuery("#realacesubmit").val(editor.getValue());
         jQuery("#form_tag_id").submit();
+    }
+
+jQuery(EditorSetup.init);
