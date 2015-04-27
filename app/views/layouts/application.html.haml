@@ -26,8 +26,8 @@
                 %span.caret
               %ul.dropdown-menu{:role => "menu"}
                 - @lessons.each do |lesson|
-                  - # I'll fix this turbolink issue later. Or someone could try messing with it.
-                  %li= link_to "Lesson " << lesson.number.to_s, lesson_path(lesson), "data-no-turbolink" => true
+                  - # Turbolink shows apparently no issue.
+                  %li= link_to "Lesson " << lesson.number.to_s, lesson_path(lesson), "data-no-turbolink" => false
 
           %ul.nav.navbar-nav.navbar-right
             %li
