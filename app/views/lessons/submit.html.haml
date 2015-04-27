@@ -8,16 +8,18 @@
 
 %p
   - if @result[:stdout] == nil
-    We could not run your code, and we received the following error:
-    = @result[:stderr]
-    %p
+    We could not run your code. Please check it for syntax errors.
   - else
     Your code returned this on standard output:
     %p
     %h4= @result[:stdout][0]
     %p
-      The test results for your submission
-      = @result[:testspassed].to_s 
+      - if @result[:testspassed][0] == true
+        Congratulations, your code passed the test! 
+      - else
+        Your code failed our test(s). Please try again!   
 
-%p= link_to "Return to list of lessons", lessons_path, "data-no-turbolink" => true  
+%p.btn.btn-default= link_to "Return to lesson", lesson_path(@lesson), "data-no-turbolink" => true  
+
+%p.btn.btn-default= link_to "Return to list of lessons", lessons_path, "data-no-turbolink" => true  
 

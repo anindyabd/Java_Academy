@@ -1,20 +1,33 @@
 .centered   
   %h1#heading Java Academy
-
+  %br
   %p 
   - if flash[:notice]
-    = flash[:notice]
+    %br 
+    %p= flash[:notice]
+    %br 
   - elsif flash[:alert]
-    = flash[:alert]
+    %br 
+    %p= flash[:alert]
+    %br 
 
   %p Welcome to Java Academy! Here we teach you the basics of the programming language Java. 
 
-
+  %br 
   - if user_signed_in?
-    %p= "Welcome " << current_user.email
+    %p= "Welcome " << current_user.email 
+    %p Remember to check out your profile page. 
+    %br
+  -else 
+    %p Sign in to keep track of your progress! You can still complete the lessons without signing in.
+    %br 
 
   %p Click on a lesson below to continue!
-  %ul 
+  
+  %br 
+  
+  %table.table.table-condensed.table-hover 
     - @lessons.each do |lesson|
       - # I'll fix this turbolink issue later. Or someone could try messing with it.
-      %li= link_to "Lesson #{lesson.number.to_s}: #{lesson.name}", lesson_path(lesson), "data-no-turbolink" => true  
+      %tr
+        %td= link_to "Lesson #{lesson.number.to_s}: #{lesson.name}", lesson_path(lesson), "data-no-turbolink" => true  
