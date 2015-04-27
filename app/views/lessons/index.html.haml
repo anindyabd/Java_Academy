@@ -2,13 +2,11 @@
   %h1#heading Java Academy
   %br
   %p 
-  - if flash[:notice]
+  - # pickup any message or nil if none
+  - message = [flash[:notice],flash[:alert]].find{|x| !x.nil?}
+  - if message
     %br 
-    %p= flash[:notice]
-    %br 
-  - elsif flash[:alert]
-    %br 
-    %p= flash[:alert]
+    %p= message
     %br 
 
   %p Welcome to Java Academy! Here we teach you the basics of the programming language Java. 
