@@ -10,10 +10,7 @@ class LessonsController < ApplicationController
   end 
 
   def submit
-    if user_signed_in? and current_user.id != nil
-      @user = User.find(current_user.id) 
-      @user.add_lesson(params[:lessonid])
-    end  
+
     if params[:realacesubmit] != nil and params[:realacesubmit] != ""
       @lesson = Lesson.find(params[:lessonid]) 
       @result = @lesson.check_submission(params[:realacesubmit]) 
@@ -24,5 +21,15 @@ class LessonsController < ApplicationController
         flash[:warning] = "There was a problem submitting your code." 
       end
     end
+    
+    # If all tests passed, add this to user records
+    if user_signed_in? and current_user.id != nil
+      if @result[testspassed].all? 
+        @user = User.find(current_user.id) 
+        @user.add_lesson(params[:lessonid])
+      end
+    end 
   end 
+
+  
 end
