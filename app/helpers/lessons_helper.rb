@@ -3,5 +3,4 @@ require 'uri'
 require 'json'
 
 module LessonsHelper
-
 end

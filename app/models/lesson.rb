@@ -8,6 +8,14 @@ class Lesson < ActiveRecord::Base
     response = Lesson.submit_work(code, self.testcases)
     return Lesson.test_response(response, self.testcases, self.expectedresults)
   end
+  
+  def self.compare_answers(answers, answer_keys)
+    result = []
+    answers.zip(answer_keys).each do |answer, key|
+      result << (answer == key)
+    end
+    result
+  end
 
   def self.test_response(response,testcases,expectedresults)
     # Verify the response of a submission against a lesson testcases
@@ -28,15 +36,10 @@ class Lesson < ActiveRecord::Base
       result[:error] = "Error: could not submit code." 
     else
       # No error with HTTP, error within code still possible
-      result[:testspassed] = Array.new
       result[:stdout] = response["stdout"]
       result[:stderr] = response["stderr"]
-      if !result[:stdout].nil?
-        outputs = result[:stdout]
-        outputs.zip(expectedresults).each do |output, expected|
-          result[:testspassed] << ( output == expected )
-        end
-      end
+      output = (result[:stdout].nil?) ? [] : result[:stdout]
+      result[:testspassed] = compare_answers(output, expectedresults)
     end 
 
     return result
@@ -46,11 +49,13 @@ class Lesson < ActiveRecord::Base
     # Submit lesson via hackerrank API
     # See https://www.hackerrank.com/api/docs for details
     uri = URI("http://api.hackerrank.com/checker/submission.json")
+
     # I have to do this to facilitate cucumber testing. Cucumber isn't 
     # allowing me to have testcases as an array, so I'm converting here.
     if testcases.instance_of? String 
       testcases = testcases.split(",") 
     end  
+
     form = {"source" => code, 
             "lang" => 3, # Number code for Java is 3
             "testcases" => testcases.to_json,
@@ -58,7 +63,6 @@ class Lesson < ActiveRecord::Base
             'format' => 'json'}
         
     response = Net::HTTP.post_form(uri, form)
-
     if response.code == "200" # Valid response
       result = JSON.parse(response.body)["result"]
     else
