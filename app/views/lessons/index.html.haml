@@ -26,6 +26,6 @@
   
   %table.table.table-condensed.table-hover 
     - @lessons.each do |lesson|
-      - # I'll fix this turbolink issue later. Or someone could try messing with it.
+      - # no apparent turbolink error
       %tr
-        %td= link_to "Lesson #{lesson.number.to_s}: #{lesson.name}", lesson_path(lesson), "data-no-turbolink" => true  
+        %td= link_to "Lesson #{lesson.number.to_s}: #{lesson.name}", lesson_path(lesson), "data-no-turbolink" => false  
