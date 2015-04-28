@@ -28,16 +28,13 @@ class Lesson < ActiveRecord::Base
       result[:error] = "Error: could not submit code." 
     else
       # No error with HTTP, error within code still possible
-      result[:testspassed] = Array.new(num_tests)
+      result[:testspassed] = Array.new
       result[:stdout] = response["stdout"]
       result[:stderr] = response["stderr"]
-      if result[:stdout] != nil
-        for i in (0...num_tests).to_a do
-          if expectedresults[i] == result[:stdout][i]
-            result[:testspassed][i] = true
-          else
-            result[:testspassed][i] = false
-          end
+      if !result[:stdout].nil?
+        outputs = result[:stdout]
+        outputs.zip(expectedresults).each do |output, expected|
+          result[:testspassed] << ( output == expected )
         end
       end
     end 
