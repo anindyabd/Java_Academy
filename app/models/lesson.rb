@@ -3,6 +3,7 @@ class Lesson < ActiveRecord::Base
   serialize :testcases
   serialize :expectedresults
   API_KEY = "hackerrank|204549-190|a37e68ec781f2525a479a5971c43772cb13b0013"
+  HACKERRANK_URI = "http://api.hackerrank.com/checker/submission.json"
 
   def check_submission(code)
     response = Lesson.submit_work(code, self.testcases)
@@ -25,9 +26,11 @@ class Lesson < ActiveRecord::Base
     # :stderr           an array containing stderr of test cases
     # :error            a string containing error with submission process
     #                   not to confuse with :stderr
+    #
     # have to do this to facilitate cucumber testing 
+    # this did not get coverage in cucumber or spec. Minh
     if expectedresults.instance_of? String 
-      expectedresults = testcases.split(",") 
+      expectedresults = expectedresults.split(",") 
     end 
     result = {}
     num_tests = testcases.length
@@ -48,7 +51,7 @@ class Lesson < ActiveRecord::Base
   def self.submit_work(code, testcases)
     # Submit lesson via hackerrank API
     # See https://www.hackerrank.com/api/docs for details
-    uri = URI("http://api.hackerrank.com/checker/submission.json")
+    uri = URI(HACKERRANK_URI)
 
     # I have to do this to facilitate cucumber testing. Cucumber isn't 
     # allowing me to have testcases as an array, so I'm converting here.

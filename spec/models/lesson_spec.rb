@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Lesson, type: :model do
-  context "The submit_code method should work properly" do
+  context "the submit_code method" do
     code = "public class HelloWorld {
           public static void main(String[] args) {
               System.out.println(\"Hello World\");
@@ -22,7 +22,7 @@ RSpec.describe Lesson, type: :model do
     end
   end
 
-  context "The test_response method should handle cases" do
+  context "the test_response method" do
 
     Lesson.create(number: 1, name: "Hello World!", 
             description: "Printing strings in Java", 
@@ -65,6 +65,63 @@ RSpec.describe Lesson, type: :model do
                                     new_expected_results)
       expect(result[:testspassed]).to eq([true,false,false])
     end
+
+    it "should accept testcases that are strings" do
+      lesson1.testcases = "1,2,aa"
+      response = Lesson.submit_work(code, lesson1.testcases)
+      sbm_result = Lesson.test_response(response,lesson1.testcases,
+                                        lesson1.expectedresults)
+      expect(sbm_result[:testspassed]).to eq([true, true,true])
+    end
+  end
+  
+  context "the test_response method" do
+    Lesson.create(number: 1, name: "Hello World!", 
+            description: "Printing strings in Java", 
+            instruction: "In Java, you can print to console by using the 
+                        System.out.println call. Try printing the string
+                        \"Hello World!\" to the screen by putting the right
+                        parameter in the coding window.",
+            skeleton_code: "public class HelloWorld {public static void main(String[] args) {System.out.println(\"Hello World\"); }}",
+            testcases: ["1","2","aa"],
+            expectedresults: ["Hello World\n","Hello World\n","Hello World\n"]
+             )
+    lesson1 = Lesson.find(1)
+    code = "public class HelloWorld {
+          public static void main(String[] args) {
+              System.out.println(\"Hello World\");
+          }
+      }"
+
+    it "should accept testcases and expected results as strings" do
+      lesson1.expectedresults = "Hello World\n,Hello World\n,Hello World\n"
+      response = Lesson.submit_work(code, lesson1.testcases)
+      sbm_result = Lesson.test_response(response,lesson1.testcases,lesson1.expectedresults)
+      expect(sbm_result[:testspassed]).to eq([true, true,true])
+
+    end
   end
 
+  context "the check_submission method" do
+    Lesson.create(number: 1, name: "Hello World!", 
+            description: "Printing strings in Java", 
+            instruction: "In Java, you can print to console by using the 
+                        System.out.println call. Try printing the string
+                        \"Hello World!\" to the screen by putting the right
+                        parameter in the coding window.",
+            skeleton_code: "public class HelloWorld {public static void main(String[] args) {System.out.println(\"Hello World\"); }}",
+            testcases: ["1","2","aa"],
+            expectedresults: ["Hello World\n","Hello World\n","Hello World\n"]
+             )
+    lesson1 = Lesson.find(1)
+    code = "public class HelloWorld {
+          public static void main(String[] args) {
+              System.out.println(\"Hello World\");
+          }
+      }"
+
+ 
+    it "should work when called on an instance of Lesson class" do
+    end
+  end
 end
