@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Lesson.delete_all
+
 Lesson.create(number: 1, name: "Hello World!", description: "Printing strings in Java", 
               instruction: "In Java, you can print to console by using the 
                         System.out.println call. Try printing the string

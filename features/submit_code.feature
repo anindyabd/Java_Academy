@@ -6,8 +6,8 @@ Feature: Ability to submit code
   Background: The Academy has several lessons
     Given these Lessons:
      | name         | number  | description       | skeleton_code | expectedresults     | testcases | 
-     | Hello World  | 100     | Write Hello World | skeleton code | 1, 1                | 1,1       |
-     | Next Lesson  | 200     | Another Lesson    | more code     | Stuff               | 2         |
+     | Hello World  | 100     | Write Hello World | skeleton code | 1,1                 | 1,1       |
+     | Next Lesson  | 200     | Another Lesson    | more code     | 2                   | 2         |
 
   Scenario: 
     Given I am on the lessons page
@@ -20,18 +20,13 @@ Feature: Ability to submit code
 
   Scenario:
     Given I am on the lessons page
-    When I follow "Lesson 100"
+    When I follow "Lesson 200"
     Then I should see "Submit"
-    And I fill in the hidden field "#realacesubmit" with 
-      """
-      public class HelloWorld { 
-          public static void main(String[] args){
-              System.out.println(1); 
-          } 
-      }
-      """
-    And I fill in the hidden field "#lessonid" with "1"
+    And I fill in the hidden field "#realacesubmit" with "public class HelloWorld { public static void main(String[] args){System.out.print(2); }  }"
+    And I fill in the hidden field "#lessonid" with "2"
     And I press "Submit"
     Then I should see "Results"
     And I should see "Your code was submitted successfully!"
     And I should see "Your code returned this on standard output"
+    And I should see "Congratulations, your code passed the test!" 
+

@@ -17,7 +17,12 @@
       - if @result[:testspassed][0] == true
         Congratulations, your code passed the test! 
       - else
-        Your code failed our test(s). Please try again!   
+        Your code failed our test(s). Please try again!
+        Here are what we expect
+        %p= @lesson.expectedresults.to_s
+        Here is what your code output
+        %p= @result[:stdout].to_s
+      
 
 %p.btn.btn-default= link_to "Return to lesson", lesson_path(@lesson), "data-no-turbolink" => true  
 
