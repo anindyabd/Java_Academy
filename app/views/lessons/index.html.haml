@@ -6,7 +6,10 @@
   - message = [flash[:notice],flash[:alert]].find{|x| !x.nil?}
   - if message
     %br 
-    %p= message
+    .alert.alert-success.alert-dismissible.fade.in{:role => "alert"}
+      %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+        %span{"aria-hidden" => "true"} ×
+      %p= message
     %br 
 
   %p Welcome to Java Academy! Here we teach you the basics of the programming language Java. 
