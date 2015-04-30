@@ -13,7 +13,7 @@
 
   %br 
   - if user_signed_in?
-    %p= "Welcome " << current_user.email 
+    %p= "Welcome " << current_user.name.to_s   
     %p Remember to check out your profile page. 
     %br
   -else 
@@ -28,4 +28,4 @@
     - @lessons.each do |lesson|
       - # no apparent turbolink error
       %tr
-        %td= link_to "Lesson #{lesson.number.to_s}: #{lesson.name}", lesson_path(lesson), "data-no-turbolink" => false  
+        %td.lesson= link_to "Lesson #{lesson.number.to_s}: #{lesson.name}", lesson_path(lesson), "data-no-turbolink" => false  

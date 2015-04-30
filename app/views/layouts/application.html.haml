@@ -37,6 +37,6 @@
             - else
               %li= link_to 'Sign up', new_user_registration_url
               %li= link_to 'Sign in', new_user_session_url
-              %li= link_to 'Sign in with Google', user_omniauth_authorize_path(:google)
+              %li= link_to 'Sign in with Google', user_omniauth_authorize_path(:google_oauth2)
     .container
       = yield

@@ -21,7 +21,7 @@ Feature: User profile
     When I fill in "Email" with "adam@colgate.edu"
     And I fill in "Password" with "12345678"
     And I press "Log in"
-    Then I should see "Welcome adam@colgate.edu"
+    Then I should see "Welcome Adam"
     When I follow "Sign out"
     Then I should see "Welcome to Java Academy"
     And I should not see "Welcom adam@colgate.edu"

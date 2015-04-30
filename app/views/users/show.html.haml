@@ -1,7 +1,7 @@
 #profile
 
    
-	%h4= "Hello, " << @user.email
+	%h4= "Hello, " << @user.name 
 
 	%div.table-responsive
 		%table.table.table-striped
@@ -15,12 +15,15 @@
 						%td= @user.name
 						%td= @user.email
 
+	- if @user.lessons.empty? 
+		%p Complete some lessons and return to this page to keep track of your progress!
+	- else 
+		%p You have completed the following lessons:
 
-	%p You have completed the following lessons:
-
-	%table.table.table-hover.table-condensed
-		- @user.lessons.each do |lesson|
-			%td= link_to "Lesson #{lesson.number.to_s}: #{lesson.name}", lesson_path(lesson), "data-no-turbolink" => true 
+		%table.table.table-hover.table-condensed
+			- @user.lessons.each do |lesson|
+				%tr 
+					%td= link_to "Lesson #{lesson.number.to_s}: #{lesson.name}", lesson_path(lesson), "data-no-turbolink" => true 
  
 
 	%p.btn.btn-default= link_to "Return to list of lessons", lessons_path  
