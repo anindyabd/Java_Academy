@@ -36,7 +36,7 @@ gem 'omniauth'
 
 # Use Github devise omniauth strategy for login 
 gem 'omniauth-github'
-
+gem "omniauth-google-oauth2"
 # Use Google fonts 
 gem 'google-webfonts'
 

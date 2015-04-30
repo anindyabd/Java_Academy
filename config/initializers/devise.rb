@@ -4,14 +4,16 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  # config.secret_key = 'a3d4c22490121ad0792dc016ec4279a178f9c3b9d312978d51f3ae80be411a2c0d26010d0549f4aa3d821a411ae01443620cc84aee4d6bf5c7bb42df41a4c664'
+  # config.secret_key = 'b079db96080d6abbb0f1189b27da026f3a3da8d4b592bdfb488c24a3708757d48c9a268b88e107fed994faaed077bc0a356f5566fb5144f91eb9806e4ec246bc'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'aguha@colgate.edu'
+  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
+
+  config.omniauth :google_oauth2, "APP_ID", "APP_SECRET", { }
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
@@ -97,7 +99,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = 'f8abda10d787d43ee5fa44d7ac13580cfb76df8b5f839fa17a543e730eb1b30ba75b07e9457298d60d38b96418ee5d4df3e5f6f6e46de00c5cc8ebf537739327'
+  # config.pepper = 'ff940dcc780a581539455ea2f021a01906e092da91987ee500ebb5d4c36ebd82755cace7607590a5569891fc69b2a421e821933070857e059b2292f79c2674e6'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -233,14 +235,7 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  if Rails.env.production? 
-    APP_ID = "71e574ac49223f745b45"
-    APP_SECRET = "13c85a252850c4d59d90c4dd74ac9432926a3612"
-  else
-    APP_ID = "8fb3e8dc4026f36b14d9"
-    APP_SECRET = "e5e684f42e5134642b6c503d85b95f6b476ad503"
-  end
-  config.omniauth :github, APP_ID, APP_SECRET
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

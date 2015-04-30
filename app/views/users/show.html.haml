@@ -1,15 +1,27 @@
 #profile
 
    
-  %h4= "Hello, " << @user.email
+	%h4= "Hello, " << @user.email
+
+	%div.table-responsive
+		%table.table.table-striped
+			%thead
+				%tr
+					%th Name
+					%th Email
+				%tbody
+
+					%tr
+						%td= @user.name
+						%td= @user.email
 
 
-  %p You have completed the following lessons:
+	%p You have completed the following lessons:
 
-  %table.table.table-hover.table-condensed
-    - @user.lessons.each do |lesson|
-      %tr
-        %td= link_to "Lesson #{lesson.number.to_s}: #{lesson.name}", lesson_path(lesson), "data-no-turbolink" => true  
+	%table.table.table-hover.table-condensed
+		- @user.lessons.each do |lesson|
+			%td= link_to "Lesson #{lesson.number.to_s}: #{lesson.name}", lesson_path(lesson), "data-no-turbolink" => true 
+ 
 
-  %p.btn.btn-default= link_to "Return to list of lessons", lessons_path  
+	%p.btn.btn-default= link_to "Return to list of lessons", lessons_path  
   
